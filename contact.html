@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Royal Spice | Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =====================
+       NAVIGATION BAR
+       ===================== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">THE <span>ROYAL</span> SPICE</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =====================
+       PAGE HEADER
+       ===================== -->
+  <section class="page-header">
+    <p class="section-label">Contact Us</p>
+    <h1>GET IN TOUCH</h1>
+    <p class="subheading">We'd Love To Hear From You</p>
+  </section>
+
+  <!-- =====================
+       CONTACT FORM SECTION
+       (reuses .contact-section / .contact-form / .form-group
+        styles already defined in style.css)
+       ===================== -->
+  <section class="contact-section">
+    <div class="container">
+
+      <form class="contact-form" action="https://formspree.io/f/xnpqvdwr" method="POST">
+
+        <!-- First Name + Last Name sit side by side on desktop -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="Enter your first name"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Enter your last name"
+              required>
+          </div>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            pattern="[0-9+\-\s()]{7,15}"
+            title="Enter a valid phone number (7–15 digits, may include +, -, spaces)">
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message..."
+            required></textarea>
+        </div>
+
+        <!-- Submit (not wired up to anything yet) -->
+        <button type="submit" class="btn btn-submit">Send Message</button>
+
+      </form>
+    <p id="success-message" class="success-message">
+       Thank you! Your message has been sent successfully.
+    </p>
+
+      <!-- Restaurant contact details, reusing the same info as the footer -->
+      <div class="contact-info">
+        <div>
+          <h4>Address</h4>
+          <p>Realy Gola Teghariya, Kishanganj, Bihar, India — PIN: 855107</p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>Monday to Sunday · 12:00 PM – 4:00 PM &amp; 7:00 PM – 11:00 PM</p>
+        </div>
+        <div>
+          <h4>Reach Us</h4>
+          <p>+91 8210347584 · harshrmk@gmail.com</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================
+       FOOTER
+       ===================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <h4>About</h4>
+          <p>The Royal Spice brings authentic, royal Indian dining to your table with timeless recipes and warm hospitality.</p>
+        </div>
+
+        <div>
+          <h4>Address</h4>
+          <p>Realy Gola Teghariya,</p>
+          <p>Kishanganj, Bihar, India</p>
+          <p>PIN: 855107</p>
+        </div>
+
+        <div>
+          <h4>Hours</h4>
+          <p>Monday to Sunday</p>
+          <p>12:00 PM – 4:00 PM</p>
+          <p>7:00 PM – 11:00 PM</p>
+        </div>
+
+        <div>
+          <h4>Contact Us</h4>
+          <p>Phone: +91 00000 00000</p>
+          <p>Email: hello@theroyalspice.com</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Royal Spice. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

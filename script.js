@@ -1,26 +1,37 @@
-/* =========================================================
-   THE ROYAL SPICE — script.js
-   Small, simple script: only job is the mobile hamburger menu.
-   ========================================================= */
+const contactForm = document.querySelector(".contact-form");
+const successMessage = document.getElementById("success-message");
 
-document.addEventListener("DOMContentLoaded", function () {
+if (contactForm && successMessage) {
+    contactForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
 
-  if (hamburger && navLinks) {
-    hamburger.addEventListener("click", function () {
-      hamburger.classList.toggle("open");
-      navLinks.classList.toggle("open");
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                contactForm.reset();
+                successMessage.style.display = "block";
+                submitButton.textContent = "Message Sent ✓";
+            } else {
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
+                alert("Something went wrong. Please try again.");
+            }
+
+        } catch (error) {
+            submitButton.disabled = false;
+            submitButton.textContent = "Send Message";
+            alert("Unable to send message. Please check your internet connection.");
+        }
     });
-
-    const links = navLinks.querySelectorAll("a");
-    links.forEach(function (link) {
-      link.addEventListener("click", function () {
-        hamburger.classList.remove("open");
-        navLinks.classList.remove("open");
-      });
-    });
-  }
-
-});
+}

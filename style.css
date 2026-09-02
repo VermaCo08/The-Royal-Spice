@@ -592,6 +592,127 @@ h1, h2, h3 {
 .lifestyle-banner h2 span {
   color: var(--gold);
 }
+/* ---------------------------------------------------------
+   13. CONTACT FORM
+   --------------------------------------------------------- */
+.contact-section {
+  background-color: var(--cream);
+  padding: 100px 0;
+}
+
+.contact-heading {
+  text-align: center;
+  color: var(--maroon);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin: 14px 0 50px;
+}
+
+.contact-form {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border: 1px solid rgba(59, 11, 11, 0.12);
+  border-radius: 10px;
+  padding: 48px;
+}
+
+/* First Name + Last Name side by side on desktop */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--maroon);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background-color: var(--cream);
+  border: 1px solid rgba(59, 11, 11, 0.2);
+  border-radius: 4px;
+  padding: 13px 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* Gold focus ring, matching the site's accent color */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201, 162, 77, 0.25);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9c8a72;
+}
+
+/* Solid gold submit button (variant of the existing .btn) */
+.btn-submit {
+  display: block;
+  width: 100%;
+  background-color: var(--gold);
+  color: var(--maroon);
+  border: 1px solid var(--gold);
+  margin-top: 4px;
+}
+
+.btn-submit:hover {
+  background-color: var(--maroon);
+  color: var(--gold);
+  border-color: var(--maroon);
+}
+
+/* Small info row under the contact form (address / hours / reach us) */
+.contact-info {
+  max-width: 640px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.contact-info h4 {
+  font-family: var(--font-heading);
+  color: var(--maroon);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.contact-info p {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+}
+.success-message {
+    display: none;
+    margin-top: 20px;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 16px;
+}
 
 /* ---------------------------------------------------------
    RESPONSIVE DESIGN
@@ -690,6 +811,19 @@ h1, h2, h3 {
     display: none;
   }
 }
+ .contact-form {
+    padding: 32px 22px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 /* =========================
    MOBILE RESPONSIVE DESIGN
    ========================= */
