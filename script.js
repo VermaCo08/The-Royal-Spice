@@ -35,3 +35,13 @@ if (contactForm && successMessage) {
         }
     });
 }
+// Mobile navigation menu
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        navLinks.classList.toggle("open");
+    });
+}
