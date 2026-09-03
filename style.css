@@ -151,7 +151,12 @@ h1, h2, h3 {
 
 .nav-links {
   display: flex;
-  gap: 36px;
+  gap: 28px;
+}
+.nav-links li:last-child a {
+  padding: 7px 10px;
+  font-size: 0.78rem;
+  white-space: nowrap;
 }
 
 .nav-links a {
@@ -713,6 +718,119 @@ h1, h2, h3 {
     border-radius: 8px;
     font-size: 16px;
 }
+/* =========================================================
+BOOKING PAGE
+========================================================= */
+
+.booking-section {
+background-color: var(--cream);
+padding: 80px 0 100px;
+}
+
+.booking-intro {
+max-width: 650px;
+margin: 0 auto 45px;
+text-align: center;
+}
+
+.booking-intro h2 {
+color: var(--maroon);
+font-size: clamp(2rem, 4vw, 2.8rem);
+margin: 14px 0 18px;
+}
+
+.booking-intro > p {
+color: var(--text-dark);
+font-size: 0.95rem;
+}
+
+.booking-form {
+max-width: 700px;
+margin: 0 auto;
+background-color: var(--white);
+border: 1px solid rgba(59, 11, 11, 0.12);
+border-radius: 10px;
+padding: 48px;
+}
+
+.booking-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 24px;
+}
+
+.booking-group {
+margin-bottom: 24px;
+}
+
+.booking-group label {
+display: block;
+font-family: var(--font-body);
+font-size: 0.78rem;
+font-weight: 600;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+color: var(--maroon);
+margin-bottom: 8px;
+}
+
+.booking-group label span {
+font-weight: 400;
+text-transform: none;
+letter-spacing: 0;
+}
+
+.booking-group input,
+.booking-group select,
+.booking-group textarea {
+width: 100%;
+font-family: var(--font-body);
+font-size: 0.95rem;
+color: var(--text-dark);
+background-color: var(--cream);
+border: 1px solid rgba(59, 11, 11, 0.2);
+border-radius: 4px;
+padding: 13px 16px;
+}
+
+.booking-group textarea {
+resize: vertical;
+min-height: 130px;
+}
+
+.booking-group input,
+.booking-group select,
+.booking-group textarea {
+outline: none;
+border-color: var(--gold);
+box-shadow: 0 0 0 3px rgba(201, 162, 77, 0.25);
+}
+
+.booking-submit {
+margin-top: 5px;
+}
+
+.booking-success {
+display: none;
+margin-top: 20px;
+padding: 15px 20px;
+text-align: center;
+color: var(--maroon);
+background-color: rgba(201, 162, 77, 0.15);
+border: 1px solid var(--gold);
+border-radius: 6px;
+}
+.nav-links li:last-child a {
+  border: 1px solid var(--gold);
+  padding: 8px 14px;
+  color: var(--gold);
+  font-size: 0.85rem;
+}
+
+.nav-links li:last-child a:hover {
+  background-color: var(--gold);
+  color: var(--maroon);
+}
 
 /* ---------------------------------------------------------
    RESPONSIVE DESIGN
@@ -907,4 +1025,22 @@ h1, h2, h3 {
     height: 300px;
     display: block;
   }
+}
+/* Booking page mobile */
+
+@media (max-width: 640px) {
+
+.booking-form {
+padding: 32px 22px;
+}
+
+.booking-row {
+grid-template-columns: 1fr;
+gap: 0;
+}
+
+.booking-section {
+padding: 60px 0 80px;
+}
+
 }

@@ -45,3 +45,41 @@ if (hamburger && navLinks) {
         navLinks.classList.toggle("open");
     });
 }
+// =========================================================
+// BOOKING FORM - SUPABASE
+// =========================================================
+
+const bookingForm = document.getElementById("bookingForm");
+const bookingSuccess = document.getElementById("booking-success");
+
+if (bookingForm) {
+    bookingForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(bookingForm);
+
+        const reservation = {
+            booking_date: formData.get("date"),
+            booking_time: formData.get("time"),
+            guests: Number(formData.get("guests")),
+            first_name: formData.get("firstName"),
+            last_name: formData.get("lastName"),
+            phone: formData.get("phone"),
+            email: formData.get("email"),
+            special_request: formData.get("specialRequest") || null
+        };
+
+        const { error } = await supabaseClient
+            .from("reservations")
+            .insert([reservation]);
+
+        if (error) {
+            console.error("Booking error:", error);
+            alert("Sorry, we couldn't submit your reservation. Please try again.");
+            return;
+        }
+
+        bookingForm.reset();
+        bookingSuccess.style.display = "block";
+    });
+}

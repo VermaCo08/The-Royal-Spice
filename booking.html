@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Royal Spice | Reserve a Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =====================
+       NAVIGATION BAR
+       ===================== -->
+
+  <header class="navbar">
+    <div class="nav-container">
+
+```
+  <a href="index.html" class="logo">
+    THE <span>ROYAL</span> SPICE
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="story.html">Our Story</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</div>
+```
+
+  </header>
+
+  <!-- =====================
+       PAGE HEADER
+       ===================== -->
+
+  <section class="page-header">
+
+```
+<p class="section-label">The Royal Spice</p>
+
+<h1>RESERVE YOUR TABLE</h1>
+
+<p class="subheading">
+  Join us for an unforgettable dining experience
+</p>
+```
+
+  </section>
+
+  <!-- =====================
+       BOOKING SECTION
+       ===================== -->
+
+  <section class="booking-section">
+
+```
+<div class="container">
+
+  <div class="booking-intro">
+
+    <p class="section-label">Reservations</p>
+
+    <h2>YOUR TABLE AWAITS</h2>
+
+    <p>
+      Choose your preferred date and time, tell us a little about yourself,
+      and we'll prepare your table for a memorable evening at The Royal Spice.
+    </p>
+
+  </div>
+
+
+  <!-- BOOKING FORM -->
+  <form class="booking-form" id="bookingForm">
+
+    <!-- Date + Time -->
+    <div class="booking-row">
+
+      <div class="booking-group">
+        <label for="bookingDate">Date</label>
+
+        <input
+          type="date"
+          id="bookingDate"
+          name="date"
+          required
+        >
+      </div>
+
+
+      <div class="booking-group">
+        <label for="bookingTime">Time</label>
+
+        <select
+          id="bookingTime"
+          name="time"
+          required
+        >
+          <option value="">Select a time</option>
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="12:30 PM">12:30 PM</option>
+          <option value="1:00 PM">1:00 PM</option>
+          <option value="1:30 PM">1:30 PM</option>
+          <option value="2:00 PM">2:00 PM</option>
+          <option value="2:30 PM">2:30 PM</option>
+          <option value="3:00 PM">3:00 PM</option>
+
+          <option value="7:00 PM">7:00 PM</option>
+          <option value="7:30 PM">7:30 PM</option>
+          <option value="8:00 PM">8:00 PM</option>
+          <option value="8:30 PM">8:30 PM</option>
+          <option value="9:00 PM">9:00 PM</option>
+          <option value="9:30 PM">9:30 PM</option>
+          <option value="10:00 PM">10:00 PM</option>
+        </select>
+
+      </div>
+
+    </div>
+
+
+    <!-- Guests -->
+    <div class="booking-group">
+
+      <label for="guests">Number of Guests</label>
+
+      <select
+        id="guests"
+        name="guests"
+        required
+      >
+        <option value="">Select guests</option>
+        <option value="1">1 Guest</option>
+        <option value="2">2 Guests</option>
+        <option value="3">3 Guests</option>
+        <option value="4">4 Guests</option>
+        <option value="5">5 Guests</option>
+        <option value="6">6 Guests</option>
+        <option value="7">7 Guests</option>
+        <option value="8">8 Guests</option>
+        <option value="9">9 Guests</option>
+        <option value="10">10 Guests</option>
+      </select>
+
+    </div>
+
+
+    <!-- First + Last Name -->
+    <div class="booking-row">
+
+      <div class="booking-group">
+
+        <label for="firstName">First Name</label>
+
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="Your first name"
+          required
+        >
+
+      </div>
+
+
+      <div class="booking-group">
+
+        <label for="lastName">Last Name</label>
+
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Your last name"
+          required
+        >
+
+      </div>
+
+    </div>
+
+
+    <!-- Contact -->
+    <div class="booking-row">
+
+      <div class="booking-group">
+
+        <label for="phone">Phone Number</label>
+
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="+91 XXXXX XXXXX"
+          required
+        >
+
+      </div>
+
+
+      <div class="booking-group">
+
+        <label for="email">Email Address</label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="your@email.com"
+          required
+        >
+
+      </div>
+
+    </div>
+
+
+    <!-- Special Request -->
+    <div class="booking-group">
+
+      <label for="specialRequest">
+        Special Request <span>(Optional)</span>
+      </label>
+
+      <textarea
+        id="specialRequest"
+        name="specialRequest"
+        placeholder="Birthday celebration, anniversary, seating preference..."
+      ></textarea>
+
+    </div>
+
+
+    <!-- Submit -->
+    <button
+      type="submit"
+      class="btn btn-submit booking-submit"
+    >
+      Reserve Table
+    </button>
+
+
+    <!-- Success Message -->
+    <p
+      id="booking-success"
+      class="booking-success"
+    >
+      Your reservation request has been received.
+    </p>
+
+  </form>
+
+</div>
+```
+
+  </section>
+
+  <!-- =====================
+       FOOTER
+       ===================== -->
+
+  <footer class="site-footer">
+
+```
+<div class="container">
+
+  <div class="footer-grid">
+
+    <div>
+      <h4>About</h4>
+      <p>
+        The Royal Spice brings authentic, royal Indian dining
+        to your table with timeless recipes and warm hospitality.
+      </p>
+    </div>
+
+    <div>
+      <h4>Address</h4>
+      <p>Realy Gola Teghariya,</p>
+      <p>Kishanganj, Bihar, India</p>
+      <p>PIN: 855108</p>
+    </div>
+
+    <div>
+      <h4>Hours</h4>
+      <p>Monday to Sunday</p>
+      <p>12:00 PM – 4:00 PM</p>
+      <p>7:00 PM – 11:00 PM</p>
+    </div>
+
+    <div>
+      <h4>Contact Us</h4>
+      <p>Phone: +91 8210347584</p>
+      <p>Email: harshrmk@gmail.com</p>
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      &copy; 2026 The Royal Spice. All rights reserved.
+    </p>
+
+  </div>
+
+</div>
+```
+
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
